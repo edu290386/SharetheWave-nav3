@@ -1,0 +1,157 @@
+:root {
+    --bg-menu: #0971b8;
+    --text-menu: #EBB45C;
+    --bg-body: #F5EFF3;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;   
+}
+
+body{
+    height: 100vh;
+    background-color: var(--bg-body);
+    font-family: 'Open Sans', sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-menu);
+    color: #FFF;
+}
+
+.toogle-menu{
+    width: 22px;
+    position: relative;
+    transform: translate(5px,33%)    
+}
+
+.toogle-menu:hover{
+    cursor: pointer; 
+}
+
+.ong-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static
+}
+
+.ong-name img {
+    width: 60px;
+}
+
+.ong-name h1 {
+    font-size:1.3em;
+    padding-left: 8px;
+}
+
+.container-social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socialmedia{
+    width:27px;
+    padding-right: 7px;
+}
+
+.ong-name-master{
+    display: none;
+}
+
+.main-menu {
+    list-style:none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-menu);
+    transform: translateY(-130%);
+}
+
+.main-menu--show{
+    transform: translateY(0);
+}
+
+.main-menu-item{
+    padding-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.main-menu-link {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 600;
+}
+
+.main-menu-link:hover{
+    color: var(--text-menu) ;
+}
+
+.container-social-master{
+    display: none;
+}
+
+@media (min-width: 880px) {
+    .main-header{
+        display: none;
+    }
+
+    .main-nav{
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--bg-menu);
+        color: #FFF;
+    }
+
+    .ong-name-master{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 5px;
+    }
+    
+    .ong-name-master img {
+        width: 60px;
+    }
+    
+    .ong-name-master h1 {
+        font-size:1.5em;
+        padding-left: 5px;
+    }
+
+    .main-menu{
+        flex-direction: row;
+        justify-content: space-between;
+        transform: translateY(0);
+    }
+
+    .main-menu-item{
+        padding: 10px;
+    }
+
+    
+    .container-social-master{
+        display: flex;
+        align-items: center;
+        padding-top: 5px;
+    }
+
+    .socialmedia-master{
+        padding: 5px;
+        height: 30px;
+    }
+
+    .socialmedia-master:hover{
+        height: 33px;
+    }
+}
